@@ -6,9 +6,9 @@ function Producto(id, nombre, precio, imagen) {
 }
 
 const productos = [
-  new Producto(1, "Auriculares", 80000, "assets/img/auriculares.webp"),
-  new Producto(2, "Teclado Mecánico", 120000, "assets/img/teclado.jpg"),
-  new Producto(3, "Mouse Gamer", 50000, "assets/img/mouse.jpg"),
+  new Producto(1, "Auriculares", 80000, "assets/img/auricularesGamer.webp"),
+  new Producto(2, "Teclado Mecánico", 120000, "assets/img/tecladoGamer.jpg"),
+  new Producto(3, "Mouse Gamer", 50000, "assets/img/mouseGamer.jpg"),
 ];
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
