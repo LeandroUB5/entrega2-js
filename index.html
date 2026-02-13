@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Mini Carrito de Compras</h1>
+    <header>
+      <h1>Mini Carrito de Compras</h1>
+      <div id="userInfo"></div>
+      <button id="btnLogin">Iniciar Sesión</button>
+      <button id="btnLogout" style="display: none">Cerrar Sesión</button>
+    </header>
 
     <input type="text" id="buscador" placeholder="Buscar producto..." />
 
@@ -20,6 +25,42 @@
     <div id="carrito"></div>
     <p id="total"></p>
     <button id="vaciarCarrito">Vaciar Carrito</button>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal">&times;</span>
+        <h2>Login</h2>
+        <form id="loginForm">
+          <input type="email" id="email" placeholder="Email" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Contraseña"
+            required
+          />
+          <button type="submit">Ingresar</button>
+        </form>
+      </div>
+    </div>
+    <div id="adminPanel" style="display: none">
+      <h2>Panel de Administración</h2>
+      <form id="formProducto">
+        <input
+          type="text"
+          id="nombreProd"
+          placeholder="Nombre del producto"
+          required
+        />
+        <input type="number" id="precioProd" placeholder="Precio" required />
+        <input
+          type="text"
+          id="imagenProd"
+          placeholder="URL de la imagen"
+          required
+        />
+        <button type="submit">Agregar producto</button>
+      </form>
+    </div>
 
     <script src="./js/script.js"></script>
   </body>
